@@ -1,4 +1,3 @@
-FROM golang:1.11
+FROM nginx:alpine
+RUN sed -i 's/Welcome to nginx/Hi guys/g' /usr/share/nginx/html/index.html
 EXPOSE 80
-COPY ./bin/hello-server /usr/local/bin/
-CMD ["hello-server"]
