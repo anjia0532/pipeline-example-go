@@ -28,9 +28,9 @@ spec:
         app: helloserver
     spec:
       imagePullSecrets:
-      - name: anjia
+      - name: pipeline-docker-registry
       containers:
-      - name: anjia0532/helloserver
+      - name: helloserver
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 80
