@@ -4,9 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: anjia0532/example-helloserver:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
-      registry: index.docker.io
+      tag: example-helloserver:${CICD_EXECUTION_SEQUENCE}
 - name: Deploy
   steps:
   - applyYamlConfig:
